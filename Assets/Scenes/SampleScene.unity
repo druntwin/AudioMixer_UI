@@ -265,7 +265,8 @@ AudioSource:
   m_GameObject: {fileID: 7685392}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -478931655742278826, guid: cdf8bb0eb8489494699c0b4513e9d122,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: bf75b984df8a84987bcf3a8bf6e2862d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -494,7 +495,8 @@ AudioSource:
   m_GameObject: {fileID: 63817741}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -478931655742278826, guid: cdf8bb0eb8489494699c0b4513e9d122,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 72e76810224064300b7d32e8322a5d12, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -955,7 +957,7 @@ GameObject:
   - component: {fileID: 495705027}
   - component: {fileID: 495705026}
   m_Layer: 0
-  m_Name: Music_Background
+  m_Name: Background_Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +972,8 @@ AudioSource:
   m_GameObject: {fileID: 495705025}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2688783945914044369, guid: cdf8bb0eb8489494699c0b4513e9d122,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 7b04c59dd84f14039b601e1abbe7b884, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1083,7 +1086,7 @@ GameObject:
   - component: {fileID: 530027281}
   - component: {fileID: 530027282}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SliderButtonsVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1171,7 +1174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 617167309}
-  - component: {fileID: 617167308}
+  - component: {fileID: 617167310}
   m_Layer: 0
   m_Name: Mixer_Controller
   m_TagString: Untagged
@@ -1179,23 +1182,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &617167308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617167307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80bf2dbcea46914da99da46ae8aaaf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button: {fileID: 1299362820}
-  _buttonImage: {fileID: 1299362821}
-  _audioSource: {fileID: 495705026}
-  _imageOn: {fileID: 21300000, guid: f2d09d4014a28c3408d456c2b81090b8, type: 3}
-  _imageOff: {fileID: 21300000, guid: 2182669c72161dd40b1d4b57702d6ed4, type: 3}
 --- !u!4 &617167309
 Transform:
   m_ObjectHideFlags: 0
@@ -1205,12 +1191,30 @@ Transform:
   m_GameObject: {fileID: 617167307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 612.7693, y: 682.7201, z: 3.124153}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617167310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617167307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26dbfd79b0dba0a49a1a9f2d29e7c5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toggleButton: {fileID: 1299362820}
+  _sliderMainVolume: {fileID: 1817245491}
+  _sliderButtonsVolume: {fileID: 530027282}
+  _sliderMusicVolume: {fileID: 965603611}
+  _audioMixerMasterGroup: {fileID: 24300002, guid: cdf8bb0eb8489494699c0b4513e9d122,
+    type: 2}
 --- !u!1 &650333067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1826,7 @@ GameObject:
   - component: {fileID: 965603610}
   - component: {fileID: 965603611}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SliderMusicVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2288,7 +2292,8 @@ AudioSource:
   m_GameObject: {fileID: 1146050646}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -478931655742278826, guid: cdf8bb0eb8489494699c0b4513e9d122,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 1be4472894949437694aead55c6da60f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2432,7 +2437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buttons Volume
+  m_text: Sounds Volume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2635,6 +2640,7 @@ GameObject:
   - component: {fileID: 1299362822}
   - component: {fileID: 1299362821}
   - component: {fileID: 1299362820}
+  - component: {fileID: 1299362823}
   m_Layer: 5
   m_Name: Button_Sound_Toggle
   m_TagString: Untagged
@@ -2743,6 +2749,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299362818}
   m_CullTransparentMesh: 1
+--- !u!114 &1299362823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299362818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7fea7c49d9ab84fb6df6c9f2b194f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toggleButtonImage: {fileID: 1299362821}
+  _imageOn: {fileID: 21300000, guid: f2d09d4014a28c3408d456c2b81090b8, type: 3}
+  _imageOff: {fileID: 21300000, guid: 2182669c72161dd40b1d4b57702d6ed4, type: 3}
+  _mixerComtroller: {fileID: 617167310}
 --- !u!1 &1310024323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3256,7 +3278,7 @@ GameObject:
   - component: {fileID: 1817245490}
   - component: {fileID: 1817245491}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SliderMainVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
